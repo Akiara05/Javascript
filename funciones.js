@@ -55,14 +55,24 @@ console.log(saludo);
 
 const musica = {
 
-    reproducir: function(){
+    reproducir: function(id){
 
-        console.log(`Reproduciendo Música...`);
+        console.log(`Reproduciendo canción con el ID ${id}.`);
 
+    },
+    pausar: function(){
+        console.log(`Pausé la música`)
     }
+
+
+}
+musica.reproducir(30);
+musica.pausar();
+
+// los métodos tambien pueden crearse o guardarse por fuera del objeto
+musica.borrar = function(id){
+    console.log(`Borrandola canción con el id ${id}.`)
 }
 
-musica.reproducir();
-
-
+musica.borrar(2);
 
